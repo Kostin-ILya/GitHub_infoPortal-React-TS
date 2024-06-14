@@ -18,6 +18,7 @@ export interface User extends BaseUser {
 }
 
 export interface LocalUser extends BaseUser {
+  avatar: string
   twitter: string
   repos: number
   created: string
