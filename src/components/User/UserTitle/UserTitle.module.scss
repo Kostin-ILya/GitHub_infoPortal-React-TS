@@ -22,10 +22,12 @@
     }
   }
 
-  h3 {
+  a {
     color: var(--main-color);
     font-size: 0.75rem;
     line-height: 1.5;
+    width: fit-content;
+    height: fit-content;
 
     &::before {
       content: '@';
