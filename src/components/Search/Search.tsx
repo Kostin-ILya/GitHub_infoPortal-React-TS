@@ -7,12 +7,14 @@ import SearchIcon from 'assets/icon-search.svg?react'
 
 interface SearchProps {
   isError: boolean
+  onSearch: (userName: string) => void
 }
 
-export const Search = ({ isError }: SearchProps) => {
+export const Search = ({ isError, onSearch }: SearchProps) => {
   const [search, setSearch] = useState('')
 
-  const onSearch = () => {
+  const handleSearch = () => {
+    if (search) onSearch(search)
     setSearch('')
   }
 
@@ -29,11 +31,12 @@ export const Search = ({ isError }: SearchProps) => {
         placeholder="Search GitHub username"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
+        onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
       />
 
       {isError && <div className={styles.error}>No result</div>}
 
-      <Button onClick={onSearch}>Search</Button>
+      <Button onClick={handleSearch}>Search</Button>
     </div>
   )
 }
