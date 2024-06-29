@@ -4,9 +4,9 @@ import styles from './UserTitle.module.scss'
 interface UserTitleProps
   extends Pick<LocalUser, 'name' | 'login' | 'created'> {}
 
-const localDate = new Intl.DateTimeFormat('ru-RU', {
+const localDate = new Intl.DateTimeFormat('en-GB', {
   day: 'numeric',
-  month: 'short',
+  month: 'long',
   year: 'numeric',
 })
 
@@ -18,10 +18,10 @@ export const UserTitle = ({ created, login, name }: UserTitleProps) => {
       <h2>{name}</h2>
 
       <a href={`https://github.com/${login}`} target="_blank">
-        {login}
+        {'@' + login}
       </a>
 
-      <span>{joinedDate}</span>
+      <span>{'Joined ' + joinedDate}</span>
     </div>
   )
 }

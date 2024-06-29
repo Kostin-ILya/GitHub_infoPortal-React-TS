@@ -1,13 +1,11 @@
-:global {
-  body[data-theme='light'] {
-    --stat-bg: var(--gray-50);
-    --stat-color: var(--gray-300);
-  }
+body[data-theme='light'] {
+  --stat-bg: var(--gray-50);
+  --stat-color: var(--gray-300);
+}
 
-  body[data-theme='dark'] {
-    --stat-bg: var(--gray-500);
-    --stat-color: var(--white);
-  }
+body[data-theme='dark'] {
+  --stat-bg: var(--gray-500);
+  --stat-color: var(--white);
 }
 
 .userStat {
