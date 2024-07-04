@@ -19,6 +19,7 @@
     fill: var(--info-color);
     margin-right: 1rem;
     width: 20px;
+    height: 20px;
   }
 
   &.empty {
@@ -32,5 +33,15 @@
 
   &:hover {
     text-decoration: underline;
+  }
+}
+
+@media (max-width: 767px) {
+  .infoItem {
+    font-size: 0.6rem;
+
+    svg {
+      margin-right: 0.5rem;
+    }
   }
 }
