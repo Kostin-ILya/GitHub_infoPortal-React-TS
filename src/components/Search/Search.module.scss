@@ -13,12 +13,11 @@ body[data-theme='dark'] {
 }
 
 .search {
-  position: relative;
-  padding: 10px 10px 10px 30px;
-  // padding: 10px 10px 10px 16px;
-  background-color: var(--search-bg, white);
   display: flex;
   align-items: center;
+  position: relative;
+  padding: 10px 10px 10px 30px;
+  background-color: var(--search-bg, white);
   box-shadow: var(--search-shadow);
   border-radius: 15px;
   cursor: pointer;
@@ -32,7 +31,6 @@ body[data-theme='dark'] {
   border: none;
   color: var(--search-color);
   font-size: 1.25rem;
-  // font-size: 0.75rem;
   margin: 0 20px;
   background-color: var(--search-bg);
 
@@ -54,6 +52,32 @@ body[data-theme='dark'] {
   right: 120px;
   top: 50%;
   transform: translateY(-50%);
-  // right: 50%;
-  // bottom: 5px;
+}
+
+@media (max-width: 575px) {
+  .search {
+    padding: 10px;
+
+    .textField {
+      font-size: 0.8rem;
+      margin: 0;
+      max-width: none;
+      height: auto;
+    }
+
+    .error {
+      right: 50%;
+      top: 48px;
+      font-size: 0.75rem;
+    }
+
+    label {
+      flex-shrink: 0;
+
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
 }

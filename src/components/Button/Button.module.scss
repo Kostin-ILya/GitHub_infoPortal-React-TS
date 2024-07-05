@@ -12,3 +12,9 @@
     background-color: var(--main-color-hover);
   }
 }
+
+@media (max-width: 575px) {
+  .button {
+    padding: 8px 14px;
+  }
+}

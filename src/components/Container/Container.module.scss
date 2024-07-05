@@ -9,3 +9,11 @@
     max-width: 540px;
   }
 }
+
+@media (max-width: 575px) {
+  .container {
+    width: 100%;
+    padding: 5px;
+    padding-bottom: 10px;
+  }
+}

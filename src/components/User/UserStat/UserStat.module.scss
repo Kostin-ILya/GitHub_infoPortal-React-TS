@@ -9,10 +9,17 @@ body[data-theme='dark'] {
 }
 
 .userStat {
+  display: flex;
+  justify-content: space-between;
   background-color: var(--stat-bg);
   color: var(--stat-color);
   padding: 15px 32px;
   border-radius: 10px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 575px) {
+  .userStat {
+    width: 100%;
+    justify-content: space-around;
+  }
 }

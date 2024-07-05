@@ -17,11 +17,11 @@ export const UserTitle = ({ created, login, name }: UserTitleProps) => {
     <div className={styles.userTitle}>
       <h2>{name}</h2>
 
+      <span>{'Joined ' + joinedDate}</span>
+
       <a href={`https://github.com/${login}`} target="_blank">
         {'@' + login}
       </a>
-
-      <span>{'Joined ' + joinedDate}</span>
     </div>
   )
 }

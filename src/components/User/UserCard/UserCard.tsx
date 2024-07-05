@@ -25,20 +25,22 @@ export const UserCard = ({
     <div className={styles.userCard}>
       <img src={avatar} alt={login} className={styles.avatar} />
 
-      <UserTitle created={created} login={login} name={name} />
+      <div className={styles.content}>
+        <UserTitle created={created} login={login} name={name} />
 
-      <p className={`${styles.bio}${bio ? '' : ` ${styles.empty}`}`}>
-        {bio || 'This profile has no bio'}
-      </p>
+        <p className={`${styles.bio}${bio ? '' : ` ${styles.empty}`}`}>
+          {bio || 'This profile has no bio'}
+        </p>
 
-      <UserStat repos={repos} followers={followers} following={following} />
+        <UserStat repos={repos} followers={followers} following={following} />
 
-      <UserInfo
-        blog={blog}
-        company={company}
-        location={location}
-        twitter={twitter}
-      />
+        <UserInfo
+          blog={blog}
+          company={company}
+          location={location}
+          twitter={twitter}
+        />
+      </div>
     </div>
   )
 }
