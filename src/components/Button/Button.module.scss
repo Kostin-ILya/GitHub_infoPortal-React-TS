@@ -11,6 +11,11 @@
   &:hover {
     background-color: var(--main-color-hover);
   }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 }
 
 @media (max-width: 575px) {

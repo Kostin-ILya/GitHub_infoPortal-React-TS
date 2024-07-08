@@ -8,9 +8,10 @@ import SearchIcon from 'assets/icon-search.svg?react'
 interface SearchProps {
   isError: boolean
   onSearch: (userName: string) => void
+  btnDisabled: boolean
 }
 
-export const Search = ({ isError, onSearch }: SearchProps) => {
+export const Search = ({ isError, onSearch, btnDisabled }: SearchProps) => {
   const [search, setSearch] = useState('')
 
   const handleSearch = () => {
@@ -36,7 +37,9 @@ export const Search = ({ isError, onSearch }: SearchProps) => {
 
       {isError && <div className={styles.error}>No result</div>}
 
-      <Button onClick={handleSearch}>Search</Button>
+      <Button onClick={handleSearch} disabled={btnDisabled}>
+        Search
+      </Button>
     </div>
   )
 }
